@@ -15,7 +15,7 @@ I transitioned from basic image summarization to a rigorous, systematic analysis
 *   **Pixel-Level Direct Injection**: I implemented a pipeline using `PIL` to convert upload streams into raw image bytes, bypassing metadata-only interpretation and forcing the model to analyze the actual pixels.
 *   **Hierarchical Anatomical Constraints**: I enforced a mandatory multi-step prompt protocol. The AI is now required to assess specific landmarks (Heart Border, Hila, Diaphragms) **before** writing an impression. This structural constraint physically prevents the model from hallucinating findings contradicted by the scan.
 *   **Clinical Data Injection**: By passing symptoms via `Form` data, I enabled "context-aware" vision. The AI now interprets the *same* visual opacity differently based on whether the patient presents with a fever (suggesting pneumonia) or is asymptomatic (suggesting a possible nodule/mass).
-*   **Model Hardening**: I moved to `gemini-1.5-pro` for its superior visual reasoning capabilities, ensuring higher fidelity in distinguishing between subtle pathologies.
+*   **Model Hardening**: I moved to `gemini-2.5-flash` for its superior visual reasoning capabilities, ensuring higher fidelity in distinguishing between subtle pathologies.
 
 ## 3. Technology Stack
 *   **Backend**: FastAPI, SQLModel
